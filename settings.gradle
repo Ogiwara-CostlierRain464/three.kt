@@ -1,0 +1,3 @@
+rootProject.name = 'ThreeKt'
+include 'three'
+include 'examples'
