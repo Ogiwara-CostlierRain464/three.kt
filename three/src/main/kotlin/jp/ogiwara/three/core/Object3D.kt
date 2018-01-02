@@ -25,6 +25,7 @@ external open class Object3D{
     //endregion
 
     //region methods
+    fun add(vararg obj: Object3D)
     fun lookAt(vector: Vector3)
     fun lookAt(x: Number, y: Number, z: Number)
     //endregion
