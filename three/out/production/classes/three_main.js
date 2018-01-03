@@ -1,4 +1,7 @@
-(function (_, Kotlin) {
+if (typeof kotlin === 'undefined') {
+  throw new Error("Error loading module 'three_main'. Its dependency 'kotlin' was not found. Please, check whether 'kotlin' is loaded prior to 'three_main'.");
+}
+var three_main = function (_, Kotlin) {
   'use strict';
   var Kind_CLASS = Kotlin.Kind.CLASS;
   function WebGLShadowMap() {
@@ -16,6 +19,6 @@
   package$webgl.WebGLShadowMap = WebGLShadowMap;
   Kotlin.defineModule('three_main', _);
   return _;
-}(module.exports, require('kotlin')));
+}(typeof three_main === 'undefined' ? {} : three_main, kotlin);
 
 //# sourceMappingURL=three_main.js.map

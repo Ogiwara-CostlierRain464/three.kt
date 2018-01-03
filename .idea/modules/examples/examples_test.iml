@@ -3,15 +3,16 @@
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JavaScript " useProjectSettings="false">
-        <testOutputPath>$MODULE_DIR$/../../../examples/build/js-tests/examples-tests.js</testOutputPath>
+        <testOutputPath>$MODULE_DIR$/../../../examples/build/classes/kotlin/test/examples_test.js</testOutputPath>
         <compilerSettings />
         <compilerArguments>
-          <option name="outputFile" value="$MODULE_DIR$/../../../examples/build/js-tests/examples-tests.js" />
+          <option name="outputFile" value="$MODULE_DIR$/../../../examples/build/classes/kotlin/test/examples_test.js" />
           <option name="noStdlib" value="true" />
           <option name="sourceMap" value="true" />
+          <option name="sourceMapPrefix" value="" />
+          <option name="sourceMapEmbedSources" value="inlining" />
           <option name="metaInfo" value="true" />
           <option name="target" value="v5" />
-          <option name="moduleKind" value="commonjs" />
           <option name="main" value="call" />
           <option name="languageVersion" value="1.2" />
           <option name="apiVersion" value="1.2" />

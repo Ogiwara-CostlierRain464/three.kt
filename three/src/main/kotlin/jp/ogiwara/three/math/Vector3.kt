@@ -16,5 +16,9 @@ external class Vector3(x: Number = definedExternally,
     //region methods
     fun add(v: Number)
     fun set(x: Number, y: Number, z: Number)
+
+    fun setX(x: Number)
+    fun setY(y: Number)
+    fun setZ(z: Number)
     //endregion
 }
