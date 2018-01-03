@@ -9,8 +9,6 @@
           <option name="outputFile" value="$MODULE_DIR$/../../../examples/build/classes/kotlin/main/examples.js" />
           <option name="noStdlib" value="true" />
           <option name="sourceMap" value="true" />
-          <option name="sourceMapPrefix" value="" />
-          <option name="sourceMapEmbedSources" value="inlining" />
           <option name="metaInfo" value="true" />
           <option name="target" value="v5" />
           <option name="main" value="call" />

@@ -8,15 +8,13 @@ var examples_main = function (_, Kotlin) {
   var WebGLRenderer = THREE.WebGLRenderer;
   var Scene = THREE.Scene;
   var PerspectiveCamera = THREE.PerspectiveCamera;
-  var CylinderGeometry = THREE.CylinderGeometry;
+  var BoxGeometry = THREE.BoxGeometry;
   var MeshNormalMaterial = THREE.MeshNormalMaterial;
   var Mesh = THREE.Mesh;
-  var DirectionalLight = THREE.DirectionalLight;
   var ensureNotNull = Kotlin.ensureNotNull;
   var Unit = Kotlin.kotlin.Unit;
   var getCallableRef = Kotlin.getCallableRef;
   var Kind_CLASS = Kotlin.Kind.CLASS;
-  var BoxGeometry = THREE.BoxGeometry;
   function main(args) {
     var runnable = new ForMe();
     runnable.run();
@@ -48,9 +46,9 @@ var examples_main = function (_, Kotlin) {
     }
     return ForMe$Companion_instance;
   }
-  function ForMe$run$lambda$tick(closure$mesh, closure$renderer, closure$scene, closure$camera) {
+  function ForMe$run$lambda$tick(closure$box, closure$renderer, closure$scene, closure$camera) {
     return function closure$tick(d) {
-      closure$mesh.rotateX(0.1);
+      closure$box.rotateX(0.1);
       closure$renderer.render(closure$scene, closure$camera);
       window.requestAnimationFrame(getCallableRef('tick', function (d) {
         return closure$tick(d), Unit;
@@ -62,16 +60,13 @@ var examples_main = function (_, Kotlin) {
     renderer.setSize(ForMe$Companion_getInstance().WIDTH, ForMe$Companion_getInstance().HEIGHT);
     var scene = new Scene();
     var camera = new PerspectiveCamera(45, ForMe$Companion_getInstance().WIDTH / ForMe$Companion_getInstance().HEIGHT | 0, 0.1, 1000);
-    camera.position.set(0, 0, 100);
-    var geometry = new CylinderGeometry(5, 5, 20, 32);
+    camera.position.set(0, 0, 1000);
+    var geometry = new BoxGeometry(400, 400, 400);
     var material = new MeshNormalMaterial();
-    var mesh = new Mesh(geometry, material);
-    scene.add(mesh);
-    var light = new DirectionalLight(3355443);
-    light.position.set(1, 1, 1);
-    scene.add(light);
+    var box = new Mesh(geometry, material);
+    scene.add(box);
     ensureNotNull(document.getElementById('WebGL-output')).appendChild(renderer.domElement);
-    var tick = ForMe$run$lambda$tick(mesh, renderer, scene, camera);
+    var tick = ForMe$run$lambda$tick(box, renderer, scene, camera);
     tick(2);
     return Unit;
   }

@@ -4,8 +4,8 @@ package jp.ogiwara.three.camera
 @JsName("PerspectiveCamera")
 external class PerspectiveCamera(fov: Number,
                                  aspect: Number,
-                                 near: Number,
-                                 far: Number) : Camera{
+                                 near: Number = definedExternally,
+                                 far: Number = definedExternally) : Camera{
     var aspect: Number = definedExternally
     var far: Number = definedExternally
     var filmGauge: Number = definedExternally

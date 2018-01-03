@@ -7,7 +7,9 @@ import jp.ogiwara.three.geometry.CylinderGeometry
 import jp.ogiwara.three.geometry.PlaneGeometry
 import jp.ogiwara.three.geometry.SphereGeometry
 import jp.ogiwara.three.light.DirectionalLight
+import jp.ogiwara.three.loader.TextureLoader
 import jp.ogiwara.three.material.MeshBasicMaterial
+import jp.ogiwara.three.material.MeshBasicMaterialParam
 import jp.ogiwara.three.material.MeshNormalMaterial
 import jp.ogiwara.three.obj.Mesh
 import jp.ogiwara.three.renderer.WebGLRenderer
@@ -30,24 +32,19 @@ class ForMe : Runnable {
             val scene = Scene()
 
             val camera = PerspectiveCamera(45, WIDTH / HEIGHT, 0.1 , 1000)
-            camera.position.set(0,0,100)
+            camera.position.set(0,0,1000)
 
-            val geometry = CylinderGeometry(5,5,20,32)
+            val geometry = BoxGeometry(400,400,400)
             val material = MeshNormalMaterial()
-            val mesh = Mesh(geometry, material)
+            val box = Mesh(geometry, material)
 
-            scene.add(mesh)
-
-            val light = DirectionalLight(0x333333)
-            light.position.set(1,1,1)
-
-            scene.add(light)
+            scene.add(box)
 
             document.getElementById("WebGL-output")!!.appendChild(renderer.domElement)
 
             @Suppress("UNUSED_PARAMETER")
             fun tick(d: Number){
-                mesh.rotateX(0.1)
+                box.rotateX(0.1)
 
                 renderer.render(scene, camera)
 
