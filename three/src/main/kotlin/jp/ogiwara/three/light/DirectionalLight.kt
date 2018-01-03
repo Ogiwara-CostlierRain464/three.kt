@@ -9,5 +9,4 @@ external class DirectionalLight(color:  Number = definedExternally,
     override var castShadow: Boolean = definedExternally
 
     override var position: Vector3
-
 }

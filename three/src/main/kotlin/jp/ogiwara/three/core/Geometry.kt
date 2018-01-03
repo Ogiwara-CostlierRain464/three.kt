@@ -4,7 +4,7 @@ package jp.ogiwara.three.core
 import jp.ogiwara.three.math.Vector3
 
 @JsName("Geometry")
-open external class Geometry {
+abstract external class Geometry {
     val id: Number
     val isGeometry: Boolean = definedExternally
     var name: String = definedExternally

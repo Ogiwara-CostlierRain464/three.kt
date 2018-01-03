@@ -3,6 +3,7 @@ package example.tutorial1
 import example.Runnable
 import jp.ogiwara.three.camera.PerspectiveCamera
 import jp.ogiwara.three.geometry.BoxGeometry
+import jp.ogiwara.three.light.DirectionalLight
 import jp.ogiwara.three.material.MeshNormalMaterial
 import jp.ogiwara.three.obj.Mesh
 import jp.ogiwara.three.renderer.WebGLRenderer
@@ -36,6 +37,7 @@ class HelloThreeKt : Runnable{
 
             document.getElementById("WebGL-output")!!.appendChild(renderer.domElement)
 
+            @Suppress("UNUSED_PARAMETER")
             fun tick(d: Number){
                 box.rotateX(0.1)
 
