@@ -1,9 +1,8 @@
 package example
 
-import example.tutorial1.ForMe
-import example.tutorial1.HelloThreeKt
+import example.tutorial1.PortalGun
 
 fun main(args: Array<String>){
-    val runnable: Runnable = ForMe()
+    val runnable: Runnable = PortalGun()
     runnable.run()
 }

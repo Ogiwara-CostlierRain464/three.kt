@@ -27,7 +27,7 @@ import kotlin.math.cos
 import kotlin.math.sin
 
 
-class ForMe : Runnable {
+class PortalGun : Runnable {
 
     companion object {
         const val WIDTH = 500

@@ -17,4 +17,5 @@ external class WebGLRenderer: Renderer{
                renderTarget: WebGLRenderTarget = definedExternally,
                forceClear: Boolean = definedExternally)
     fun setSize(width: Number, height: Number)
+    fun setClearColor(color: Number)
 }
