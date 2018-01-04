@@ -2,7 +2,7 @@
 package jp.ogiwara.three.light
 
 /**
- * 環境光
+ * https://ics-creative.github.io/tutorial-three/samples/light_ambient.html
  */
 @JsName("AmbientLight")
 external class AmbientLight(color: Number,

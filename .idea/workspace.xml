@@ -41,85 +41,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="PortalGun.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/src/main/kotlin/example/tutorial1/PortalGun.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="36" column="24" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="1" />
-              <folding>
-                <element signature="e#27#1030#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebGLRenderer.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/renderer/WebGLRenderer.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scene.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/scene/Scene.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColorPalette.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/util/ColorPalette.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/src/main/kotlin/example/App.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ForMe.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/src/main/kotlin/example/tutorial1/ForMe.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="29" column="11" lean-forward="false" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-              <folding>
-                <element signature="e#27#1030#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColladaLoader.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/loader/ColladaLoader.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AmbientLight.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/AmbientLight.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <caret line="4" column="75" lean-forward="false" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectionalLight.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/DirectionalLight.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="6" column="79" lean-forward="false" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrthographicCamera.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/camera/OrthographicCamera.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -829,14 +775,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LICENSE" />
-        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/scene/Scene.kt" />
-        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/math/Quaternion.kt" />
-        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/renderer/WebGLRenderTarget.kt" />
-        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/geometry/BoxGeometry.kt" />
-        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/Material.kt" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/obj/Mesh.kt" />
-        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshNormalMaterial.kt" />
         <option value="$PROJECT_DIR$/examples/out/production/classes/examples_main.js.map" />
         <option value="$PROJECT_DIR$/examples/out/production/classes/examples_main.js" />
         <option value="$PROJECT_DIR$/three/build.gradle" />
@@ -846,7 +785,6 @@
         <option value="$PROJECT_DIR$/examples/src/main/kotlin/example/tutorial1/HelloWorld.kt" />
         <option value="$PROJECT_DIR$/examples/src/main/kotlin/example/Runnable.kt" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/core/Object3D.kt" />
-        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/DirectionalLight.kt" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/Light.kt" />
         <option value="$PROJECT_DIR$/examples/src/main/kotlin/example/tutorial1/HelloThreeKt.kt" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/core/Geometry.kt" />
@@ -858,7 +796,6 @@
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/math/Color.kt" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/util/ColorPalette.kt" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshBasicMaterial.kt" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshBasicMaterialParam.kt" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/loader/TextureLoader.kt" />
         <option value="$PROJECT_DIR$/start.cmd" />
@@ -874,12 +811,21 @@
         <option value="$PROJECT_DIR$/examples/index.html" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/loader/TDSLoader.kt" />
         <option value="$PROJECT_DIR$/examples/src/main/kotlin/example/tutorial1/MoveEarth.kt" />
-        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/AmbientLight.kt" />
         <option value="$PROJECT_DIR$/examples/src/main/kotlin/example/App.kt" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/renderer/WebGLRenderer.kt" />
         <option value="$PROJECT_DIR$/examples/src/main/kotlin/example/tutorial1/PortalGun.kt" />
         <option value="$PROJECT_DIR$/examples/src/main/kotlin/example/tutorial1/ForMe.kt" />
+        <option value="$PROJECT_DIR$/examples/three-js/r89/ColladaLoader.js" />
         <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/loader/ColladaLoader.kt" />
+        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshBasicMaterial.kt" />
+        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshNormalMaterial.kt" />
+        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshLambertMaterial.kt" />
+        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshPhongMaterial.kt" />
+        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshToonMaterial.kt" />
+        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshStandardMaterial.kt" />
+        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/AmbientLight.kt" />
+        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/DirectionalLight.kt" />
+        <option value="$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/camera/OrthographicCamera.kt" />
       </list>
     </option>
   </component>
@@ -919,6 +865,19 @@
             <path>
               <item name="ThreeKt" type="b2602c69:ProjectViewProjectNode" />
               <item name="three.kt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="examples" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="three-js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ThreeKt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="three.kt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="examples" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="three-js" type="462c0819:PsiDirectoryNode" />
+              <item name="r89" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ThreeKt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="three.kt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="three" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -950,6 +909,26 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="three" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ThreeKt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="three.kt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="three" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="three" type="462c0819:PsiDirectoryNode" />
+              <item name="camera" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ThreeKt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="three.kt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="three" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="three" type="462c0819:PsiDirectoryNode" />
+              <item name="light" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ThreeKt" type="b2602c69:ProjectViewProjectNode" />
@@ -960,6 +939,16 @@
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="three" type="462c0819:PsiDirectoryNode" />
               <item name="loader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ThreeKt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="three.kt" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="three" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="three" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1093,7 +1082,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4236111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46626985" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24976076" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1146,55 +1135,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/renderer/Renderer.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/geometry/PlaneGeometry.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="71" lean-forward="false" selection-start-line="9" selection-start-column="71" selection-end-line="9" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/geometry/CylinderGeometry.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="13" column="76" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="13" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/geometry/ConeGeometry.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="63" lean-forward="false" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/geometry/BoxGeometry.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="79" lean-forward="false" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-js/1.2.10/8e54be35c1e28d9e422e60cc792b14c79b04f4d2/kotlin-stdlib-js-1.2.10-sources.jar!/kotlin/core/core.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/math/Color.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/three/out/production/classes/three_main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3000">
@@ -1237,27 +1177,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/res/image/earth.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshBasicMaterial.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/loader/TextureLoader.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/start.cmd" />
@@ -1405,22 +1331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/loader/TDSLoader.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/kotlin/example/tutorial1/HelloThreeKt.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1436,22 +1346,6 @@
           <folding>
             <element signature="e#27#946#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/DirectionalLight.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/AmbientLight.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1517,10 +1411,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/three-js/r89/ColladaLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="3469" column="0" lean-forward="true" selection-start-line="3469" selection-start-column="0" selection-end-line="3469" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/loader/TextureLoader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/loader/TDSLoader.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/loader/ColladaLoader.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="6" column="86" lean-forward="false" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshBasicMaterial.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshNormalMaterial.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="87" lean-forward="false" selection-start-line="4" selection-start-column="87" selection-end-line="4" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshLambertMaterial.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="88" lean-forward="false" selection-start-line="4" selection-start-column="88" selection-end-line="4" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshPhongMaterial.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="86" lean-forward="false" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshToonMaterial.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/material/MeshStandardMaterial.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="89" lean-forward="false" selection-start-line="4" selection-start-column="89" selection-end-line="4" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/AmbientLight.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="75" lean-forward="false" selection-start-line="4" selection-start-column="75" selection-end-line="4" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/light/DirectionalLight.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="79" lean-forward="false" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/three/src/main/kotlin/jp/ogiwara/three/camera/OrthographicCamera.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
           <folding />
         </state>
       </provider>
