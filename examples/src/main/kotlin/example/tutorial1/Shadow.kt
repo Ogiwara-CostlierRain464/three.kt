@@ -23,7 +23,7 @@ import kotlin.math.cos
 import kotlin.math.sin
 
 
-class ForMe : Runnable {
+class Shadow : Runnable {
 
     companion object {
         const val WIDTH = 500

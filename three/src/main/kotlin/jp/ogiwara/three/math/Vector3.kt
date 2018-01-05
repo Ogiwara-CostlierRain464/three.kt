@@ -2,6 +2,8 @@
 
 package jp.ogiwara.three.math
 
+import jp.ogiwara.three.camera.Camera
+
 @JsName("Vector3")
 external class Vector3(x: Number = definedExternally,
                        y: Number = definedExternally,
@@ -14,7 +16,11 @@ external class Vector3(x: Number = definedExternally,
     //endregion
 
     //region methods
-    fun add(v: Number)
+    fun add(v: Vector3)
+
+
+    fun project(camera: Camera)
+
     fun set(x: Number, y: Number, z: Number)
 
     fun setX(x: Number)

@@ -70,13 +70,6 @@ var three_main = function (_, Kotlin) {
     $this.asDynamic = asDynamic;
     return $this;
   }
-  function WebGLShadowMap() {
-  }
-  WebGLShadowMap.$metadata$ = {
-    kind: Kind_CLASS,
-    simpleName: 'WebGLShadowMap',
-    interfaces: []
-  };
   function ColorPalette() {
     ColorPalette_instance = this;
     this.RED = new Color(244, 67, 54);
@@ -106,9 +99,6 @@ var three_main = function (_, Kotlin) {
   var package$material = package$three.material || (package$three.material = {});
   package$material.MeshBasicMaterialParam_init = MeshBasicMaterialParam_init;
   package$material.MeshBasicMaterialParam = MeshBasicMaterialParam;
-  var package$renderer = package$three.renderer || (package$three.renderer = {});
-  var package$webgl = package$renderer.webgl || (package$renderer.webgl = {});
-  package$webgl.WebGLShadowMap = WebGLShadowMap;
   var package$util = package$three.util || (package$three.util = {});
   Object.defineProperty(package$util, 'ColorPalette', {
     get: ColorPalette_getInstance

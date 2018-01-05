@@ -5,7 +5,7 @@ import jp.ogiwara.three.core.Geometry
 import jp.ogiwara.three.core.Object3D
 import jp.ogiwara.three.material.Material
 
-@JsName("Mesh")
-open external class Mesh(geometry: Geometry,material: Material): Object3D{
-    fun clone(): Mesh
+@JsName("Points")
+external class Points(geometry: Geometry = definedExternally,
+                      material: Material = definedExternally): Object3D{
 }

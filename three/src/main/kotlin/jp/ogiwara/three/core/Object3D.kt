@@ -27,8 +27,13 @@ external open class Object3D{
 
     //region methods
     fun add(vararg obj: Object3D)
+
+    open fun clone(recursive: Boolean): Object3D
+
     fun lookAt(vector: Vector3)
     fun lookAt(x: Number, y: Number, z: Number)
+
+    fun remove(vararg obj: Object3D)
 
     fun rotateX(rad: Number)
     fun rotateY(rad: Number)
