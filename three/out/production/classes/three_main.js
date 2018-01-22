@@ -93,6 +93,30 @@ var three_main = function (_, Kotlin) {
     }
     return ColorPalette_instance;
   }
+  function dynamic() {
+    return new DynamicParam();
+  }
+  function DynamicParam() {
+    this.obj_0 = new DynamicParam$obj$ObjectLiteral();
+  }
+  DynamicParam.prototype.color_3p81yu$ = function (color) {
+    this.obj_0['color'] = color;
+    return this;
+  };
+  DynamicParam.prototype.create = function () {
+    return this.obj_0;
+  };
+  function DynamicParam$obj$ObjectLiteral() {
+  }
+  DynamicParam$obj$ObjectLiteral.$metadata$ = {
+    kind: Kind_CLASS,
+    interfaces: []
+  };
+  DynamicParam.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'DynamicParam',
+    interfaces: []
+  };
   var package$jp = _.jp || (_.jp = {});
   var package$ogiwara = package$jp.ogiwara || (package$jp.ogiwara = {});
   var package$three = package$ogiwara.three || (package$ogiwara.three = {});
@@ -103,6 +127,8 @@ var three_main = function (_, Kotlin) {
   Object.defineProperty(package$util, 'ColorPalette', {
     get: ColorPalette_getInstance
   });
+  package$util.dynamic = dynamic;
+  package$util.DynamicParam = DynamicParam;
   Kotlin.defineModule('three_main', _);
   return _;
 }(typeof three_main === 'undefined' ? {} : three_main, kotlin);

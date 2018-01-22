@@ -12,6 +12,7 @@ import jp.ogiwara.three.light.DirectionalLight
 import jp.ogiwara.three.material.MeshBasicMaterial
 import jp.ogiwara.three.material.MeshLambertMaterial
 import jp.ogiwara.three.material.MeshNormalMaterial
+import jp.ogiwara.three.math.Vector2
 import jp.ogiwara.three.math.Vector3
 import jp.ogiwara.three.obj.Group
 import jp.ogiwara.three.obj.Mesh
@@ -48,7 +49,7 @@ class Tetris: Runnable {
     }
 
     override fun run() {
-        _2()
+        val board = TetrisBoard(Vector3(0,0,0))
     }
 
     private fun _1(){
@@ -121,9 +122,9 @@ class Tetris: Runnable {
             grid.position.set(250,0,250)
             scene.add(grid)
 
-            val box = MoveAbleBox(50)
-            box.position.set(25,25,475)
-            scene.add(box)
+            val box = TBlock(Vector3(25,25,475))
+            scene.add(box.group)
+
 
             scene.add(AxesHelper(500))
 
@@ -137,13 +138,16 @@ class Tetris: Runnable {
             document.getElementById(WEB_GL_TAG)!!.appendChild(renderer.domElement)
 
             @Suppress("UNUSED_PARAMETER")
-            fun tick(d: Double){
+            fun tick(`_`: Double){
+
                 renderer.render(scene, camera)
 
-                window.requestAnimationFrame(::tick)
+
             }
 
-            tick(2.toDouble())
+            window.requestAnimationFrame(::tick)
+
+            //tick(2.toDouble())
         }
     }
 
@@ -180,6 +184,39 @@ class MoveAbleBox(size: Number):
     }
 }
 
-class TBlock: Group(){
-    //T
+class TBlock(private val centerPos: Vector3){
+
+    val group = Group()
+
+    init{
+        prepareBoxes()
+        prepareKeyBoard()
+    }
+
+    private fun prepareBoxes(){
+        val b = Mesh(BoxGeometry(50,50,50),MeshNormalMaterial())
+        b.position.set(0,0,0)
+        b.position.add(centerPos)
+        val a = b.clone()
+        a.position.add(Vector3(-50,0,0))
+        val c = b.clone()
+        c.position.add(Vector3(50,0,0))
+        val d = b.clone()
+        d.position.add(Vector3(0,0,50))
+
+        group.add(*kotlin.arrayOf(a,b,c,d))
+    }
+
+    private fun prepareKeyBoard(){
+        document.addEventListener("keypress",{
+            if(it is KeyboardEvent){
+                when(it.key){
+                    "w" -> group.position.add(Vector3(0,0,-50))
+                    "a" -> group.position.add(Vector3(-50,0,0))
+                    "s" -> group.position.add(Vector3(0,0,50))
+                    "d" -> group.position.add(Vector3(50,0,0))
+                }
+            }
+        })
+    }
 }

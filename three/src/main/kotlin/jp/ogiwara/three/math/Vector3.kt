@@ -10,9 +10,9 @@ external class Vector3(x: Number = definedExternally,
                        z: Number = definedExternally) {
     //region properties
     var isVector3: Boolean = definedExternally
-    val x: Number
-    val y: Number
-    val z: Number
+    val x: Double
+    val y: Double
+    val z: Double
     //endregion
 
     //region methods

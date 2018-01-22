@@ -5,5 +5,7 @@ package jp.ogiwara.three.material
  * https://ics-creative.github.io/tutorial-three/samples/material_variation_toon.html
  */
 @JsName("MeshToonMaterial")
-external class MeshToonMaterial(parameters: dynamic) :Material{
+external class MeshToonMaterial :Material{
+    constructor()
+    constructor(parameters: dynamic)
 }

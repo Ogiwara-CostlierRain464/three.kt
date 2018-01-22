@@ -3,11 +3,11 @@ if (typeof kotlin === 'undefined') {
 }
 var examples_main = function (_, Kotlin) {
   'use strict';
-  var Kind_INTERFACE = Kotlin.Kind.INTERFACE;
   var Unit = Kotlin.kotlin.Unit;
-  var Kind_CLASS = Kotlin.Kind.CLASS;
+  var Kind_INTERFACE = Kotlin.Kind.INTERFACE;
   var Kind_OBJECT = Kotlin.Kind.OBJECT;
-  var WebGLRenderer = THREE.WebGLRenderer;
+  var Vector3 = THREE.Vector3;
+  var WebGLRenderer_init = THREE.WebGLRenderer;
   var Scene = THREE.Scene;
   var OrthographicCamera = THREE.OrthographicCamera;
   var OrbitControls = THREE.OrbitControls;
@@ -20,51 +20,42 @@ var examples_main = function (_, Kotlin) {
   var IntRange = Kotlin.kotlin.ranges.IntRange;
   var BoxGeometry = THREE.BoxGeometry;
   var ensureNotNull = Kotlin.ensureNotNull;
-  var Vector3 = THREE.Vector3;
   var getCallableRef = Kotlin.getCallableRef;
   var GridHelper = THREE.GridHelper;
+  var Kind_CLASS = Kotlin.Kind.CLASS;
+  var Geometry = THREE.Geometry;
+  var until = Kotlin.kotlin.ranges.until_dqglrj$;
+  var PointsMaterial = THREE.PointsMaterial;
+  var Points = THREE.Points;
   var PerspectiveCamera = THREE.PerspectiveCamera;
+  var to = Kotlin.kotlin.to_ujzrz7$;
+  var json = Kotlin.kotlin.js.json_pyyo18$;
+  var MeshPhongMaterial_init = THREE.MeshPhongMaterial;
+  var DirectionalLight = THREE.DirectionalLight;
+  var TextureLoader = THREE.TextureLoader;
   var MeshStandardMaterial = THREE.MeshStandardMaterial;
   var TorusKnotGeometry = THREE.TorusKnotGeometry;
   var SpotLight = THREE.SpotLight;
   var SphereGeometry = THREE.SphereGeometry;
-  var TextureLoader = THREE.TextureLoader;
   var MeshBasicMaterial_init = THREE.MeshBasicMaterial;
-  var DirectionalLight = THREE.DirectionalLight;
   var AmbientLight = THREE.AmbientLight;
   var TDSLoader = THREE.TDSLoader;
   MoveAbleBox.prototype = Object.create(Mesh.prototype);
   MoveAbleBox.prototype.constructor = MoveAbleBox;
   var WEB_GL_TAG;
-  function main(args) {
-    var runnable = new Tetris();
+  function main$lambda(it) {
+    var runnable = new Shadow();
     runnable.run();
+    return Unit;
+  }
+  function main(args) {
+    window.onload = main$lambda;
   }
   function Runnable() {
   }
   Runnable.$metadata$ = {
     kind: Kind_INTERFACE,
     simpleName: 'Runnable',
-    interfaces: []
-  };
-  function Stage() {
-  }
-  Stage.prototype.init = function () {
-  };
-  Stage.prototype.mainLoop = function () {
-  };
-  Stage.prototype.onKeyDown = function () {
-  };
-  Stage.$metadata$ = {
-    kind: Kind_CLASS,
-    simpleName: 'Stage',
-    interfaces: []
-  };
-  function MoveAbleBlock() {
-  }
-  MoveAbleBlock.$metadata$ = {
-    kind: Kind_CLASS,
-    simpleName: 'MoveAbleBlock',
     interfaces: []
   };
   function Tetris() {
@@ -87,7 +78,7 @@ var examples_main = function (_, Kotlin) {
     return Tetris$Companion_instance;
   }
   Tetris.prototype.run = function () {
-    this._2_0();
+    var board = new TetrisBoard(new Vector3(0, 0, 0));
   };
   function Tetris$_1$lambda$lambda(closure$group) {
     return function (it) {
@@ -119,7 +110,7 @@ var examples_main = function (_, Kotlin) {
     };
   }
   function Tetris$_1$lambda(it) {
-    var renderer = new WebGLRenderer();
+    var renderer = new WebGLRenderer_init();
     renderer.setSize(Tetris$Companion_getInstance().SIZE, Tetris$Companion_getInstance().SIZE);
     renderer.setClearColor(16777215);
     var scene = new Scene();
@@ -151,32 +142,29 @@ var examples_main = function (_, Kotlin) {
     window.onload = Tetris$_1$lambda;
   };
   function Tetris$_2$lambda$tick(closure$renderer, closure$scene, closure$camera) {
-    return function closure$tick(d) {
+    return function (_) {
       closure$renderer.render(closure$scene, closure$camera);
-      window.requestAnimationFrame(getCallableRef('tick', function (d) {
-        return closure$tick(d), Unit;
-      }));
     };
   }
   function Tetris$_2$lambda(it) {
-    var renderer = new WebGLRenderer();
+    var renderer = new WebGLRenderer_init();
     renderer.setSize(Tetris$Companion_getInstance().SIZE, Tetris$Companion_getInstance().SIZE);
     renderer.setClearColor(16777215);
     var scene = new Scene();
     var grid = new GridHelper(500);
     grid.position.set(250, 0, 250);
     scene.add(grid);
-    var box = new MoveAbleBox(50);
-    box.position.set(25, 25, 475);
-    scene.add(box);
+    var box = new TBlock(new Vector3(25, 25, 475));
+    scene.add(box.group);
     scene.add(new AxesHelper(500));
     var camera = new OrthographicCamera(Tetris$Companion_getInstance().SIZE / -2 | 0, Tetris$Companion_getInstance().SIZE / 2 | 0, Tetris$Companion_getInstance().SIZE / 2 | 0, Tetris$Companion_getInstance().SIZE / -2 | 0, 1, 10000);
     camera.position.set(250, 500, 250);
     camera.lookAt(grid.position);
     ensureNotNull(document.getElementById(WEB_GL_TAG)).appendChild(renderer.domElement);
     var tick = Tetris$_2$lambda$tick(renderer, scene, camera);
-    tick(2);
-    return Unit;
+    return window.requestAnimationFrame(getCallableRef('tick', function (_) {
+      return tick(_), Unit;
+    }));
   }
   Tetris.prototype._2_0 = function () {
     window.onload = Tetris$_2$lambda;
@@ -225,6 +213,212 @@ var examples_main = function (_, Kotlin) {
   MoveAbleBox.$metadata$ = {
     kind: Kind_CLASS,
     simpleName: 'MoveAbleBox',
+    interfaces: []
+  };
+  function TBlock(centerPos) {
+    this.centerPos_0 = centerPos;
+    this.group = new Group();
+    this.prepareBoxes_0();
+    this.prepareKeyBoard_0();
+  }
+  TBlock.prototype.prepareBoxes_0 = function () {
+    var tmp$;
+    var b = new Mesh(new BoxGeometry(50, 50, 50), new MeshNormalMaterial());
+    b.position.set(0, 0, 0);
+    b.position.add(this.centerPos_0);
+    var a = b.clone();
+    a.position.add(new Vector3(-50, 0, 0));
+    var c = b.clone();
+    c.position.add(new Vector3(50, 0, 0));
+    var d = b.clone();
+    d.position.add(new Vector3(0, 0, 50));
+    (tmp$ = this.group).add.apply(tmp$, [a, b, c, d]);
+  };
+  function TBlock$prepareKeyBoard$lambda(this$TBlock) {
+    return function (it) {
+      if (Kotlin.isType(it, KeyboardEvent)) {
+        switch (it.key) {
+          case 'w':
+            this$TBlock.group.position.add(new Vector3(0, 0, -50));
+            break;
+          case 'a':
+            this$TBlock.group.position.add(new Vector3(-50, 0, 0));
+            break;
+          case 's':
+            this$TBlock.group.position.add(new Vector3(0, 0, 50));
+            break;
+          case 'd':
+            this$TBlock.group.position.add(new Vector3(50, 0, 0));
+            break;
+        }
+      }
+      return Unit;
+    };
+  }
+  TBlock.prototype.prepareKeyBoard_0 = function () {
+    document.addEventListener('keypress', TBlock$prepareKeyBoard$lambda(this));
+  };
+  TBlock.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'TBlock',
+    interfaces: []
+  };
+  function TetrisBoard(cornerPosition) {
+    TetrisBoard$Companion_getInstance();
+    this.cornerPosition_0 = cornerPosition;
+    this.scene_0 = new Scene();
+    this.renderer_0 = null;
+    this.camera_0 = new PerspectiveCamera(45, 1, 0.1, 10000);
+    this.renderer_0 = new WebGLRenderer_init(json([to('antialias', true)]));
+    this.renderer_0.setSize(TetrisBoard$Companion_getInstance().RENDER_SIZE, TetrisBoard$Companion_getInstance().RENDER_SIZE);
+    this.renderer_0.shadowMap.enabled = true;
+    var plane = new Mesh(new PlaneGeometry(TetrisBoard$Companion_getInstance().STAGE_WIDTH, TetrisBoard$Companion_getInstance().STAGE_HEIGHT), new MeshPhongMaterial_init(json([to('wireframe', true), to('color', 2201331)])));
+    plane.position.set(this.cornerPosition_0.x + 250, this.cornerPosition_0.y + 500, this.cornerPosition_0.z);
+    plane.receiveShadow = true;
+    this.scene_0.add(plane);
+    this.camera_0.position.set(plane.position.x + 100, plane.position.y + 100, plane.position.z + 1200);
+    this.camera_0.lookAt(plane.position);
+    this.camera_0.castShadow = true;
+    var light = new DirectionalLight(16777215);
+    light.position.set(1, 1, 1);
+    this.scene_0.add(light);
+    this.scene_0.add(new AxesHelper(500));
+    var tBlock = new TetrisBlock(this.cornerPosition_0);
+    this.scene_0.add(tBlock.group);
+    ensureNotNull(document.getElementById(WEB_GL_TAG)).appendChild(this.renderer_0.domElement);
+    this.step_0(2);
+    this.createStarField_0();
+  }
+  function TetrisBoard$Companion() {
+    TetrisBoard$Companion_instance = this;
+    this.STAGE_HEIGHT = 1000;
+    this.STAGE_WIDTH = 500;
+    this.RENDER_SIZE = 700;
+  }
+  TetrisBoard$Companion.$metadata$ = {
+    kind: Kind_OBJECT,
+    simpleName: 'Companion',
+    interfaces: []
+  };
+  var TetrisBoard$Companion_instance = null;
+  function TetrisBoard$Companion_getInstance() {
+    if (TetrisBoard$Companion_instance === null) {
+      new TetrisBoard$Companion();
+    }
+    return TetrisBoard$Companion_instance;
+  }
+  TetrisBoard.prototype.step_0 = function (_) {
+    this.renderer_0.render(this.scene_0, this.camera_0);
+    window.requestAnimationFrame(getCallableRef('step', function ($receiver, _) {
+      return $receiver.step_0(_), Unit;
+    }.bind(null, this)));
+  };
+  function TetrisBoard$createStarField$ObjectLiteral() {
+  }
+  TetrisBoard$createStarField$ObjectLiteral.$metadata$ = {
+    kind: Kind_CLASS,
+    interfaces: []
+  };
+  TetrisBoard.prototype.createStarField_0 = function () {
+    var geometry = new Geometry();
+    var numParticle = 1000;
+    var size = 1500;
+    var tmp$;
+    tmp$ = until(0, size).iterator();
+    while (tmp$.hasNext()) {
+      var element = tmp$.next();
+      geometry.vertices.push(new Vector3(size * (Math.random() + 1), size * (Math.random() + 1), size * (Math.random() + 1)));
+      geometry.vertices.push(new Vector3(size * (Math.random() - 1), size * (Math.random() - 1), size * (Math.random() - 1)));
+    }
+    var d = new TetrisBoard$createStarField$ObjectLiteral();
+    d['size'] = 10;
+    d['color'] = 16777215;
+    var material = new PointsMaterial(d);
+    var mesh = new Points(geometry, material);
+    this.scene_0.add(mesh);
+  };
+  TetrisBoard.prototype.downBlocks = function () {
+  };
+  TetrisBoard.prototype.removeLine = function () {
+  };
+  TetrisBoard.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'TetrisBoard',
+    interfaces: []
+  };
+  function TetrisBlock(cornerPosition) {
+    TetrisBlock$Companion_getInstance();
+    this.cornerPosition_0 = cornerPosition;
+    this.group = new Group();
+    this.prepareBoxes_0();
+    this.prepareKeyBoard_0();
+  }
+  function TetrisBlock$Companion() {
+    TetrisBlock$Companion_instance = this;
+    this.SIZE = 50;
+    this.COLOR = 5025616;
+  }
+  TetrisBlock$Companion.$metadata$ = {
+    kind: Kind_OBJECT,
+    simpleName: 'Companion',
+    interfaces: []
+  };
+  var TetrisBlock$Companion_instance = null;
+  function TetrisBlock$Companion_getInstance() {
+    if (TetrisBlock$Companion_instance === null) {
+      new TetrisBlock$Companion();
+    }
+    return TetrisBlock$Companion_instance;
+  }
+  function TetrisBlock$prepareBoxes$ObjectLiteral() {
+  }
+  TetrisBlock$prepareBoxes$ObjectLiteral.$metadata$ = {
+    kind: Kind_CLASS,
+    interfaces: []
+  };
+  TetrisBlock.prototype.prepareBoxes_0 = function () {
+    var loader = new TextureLoader();
+    var texture = loader.load('examples/res/image/iron-material-512.jpg');
+    var param = new TetrisBlock$prepareBoxes$ObjectLiteral();
+    param['map'] = texture;
+    var b = new Mesh(new BoxGeometry(TetrisBlock$Companion_getInstance().SIZE, TetrisBlock$Companion_getInstance().SIZE, TetrisBlock$Companion_getInstance().SIZE), new MeshPhongMaterial_init(param));
+    b.position.set(this.cornerPosition_0.x + (TetrisBlock$Companion_getInstance().SIZE / 2 | 0), this.cornerPosition_0.y + TetrisBoard$Companion_getInstance().STAGE_HEIGHT - (TetrisBlock$Companion_getInstance().SIZE / 2 | 0), this.cornerPosition_0.z + (TetrisBlock$Companion_getInstance().SIZE / 2 | 0));
+    b.castShadow = true;
+    var a = b.clone();
+    a.position.add(new Vector3(-50, 0, 0));
+    var c = b.clone();
+    c.position.add(new Vector3(50, 0, 0));
+    var d = b.clone();
+    d.position.add(new Vector3(0, -50, 0));
+    this.group.add(a, b, c, d);
+  };
+  function TetrisBlock$prepareKeyBoard$lambda(this$TetrisBlock) {
+    return function (it) {
+      if (Kotlin.isType(it, KeyboardEvent)) {
+        switch (it.key) {
+          case 'w':
+            this$TetrisBlock.group.position.add(new Vector3(0, 50, 0));
+            break;
+          case 'a':
+            this$TetrisBlock.group.position.add(new Vector3(-50, 0, 0));
+            break;
+          case 's':
+            this$TetrisBlock.group.position.add(new Vector3(0, -50, 0));
+            break;
+          case 'd':
+            this$TetrisBlock.group.position.add(new Vector3(50, 0, 0));
+            break;
+        }
+      }
+      return Unit;
+    };
+  }
+  TetrisBlock.prototype.prepareKeyBoard_0 = function () {
+    document.addEventListener('keypress', TetrisBlock$prepareKeyBoard$lambda(this));
+  };
+  TetrisBlock.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'TetrisBlock',
     interfaces: []
   };
   function ForMe() {
@@ -276,7 +470,7 @@ var examples_main = function (_, Kotlin) {
     };
   }
   function ForMe$run$lambda(it) {
-    var renderer = new WebGLRenderer();
+    var renderer = new WebGLRenderer_init();
     renderer.setSize(ForMe$Companion_getInstance().WIDTH, ForMe$Companion_getInstance().HEIGHT);
     renderer.setClearColor(10395294);
     renderer.shadowMap.enabled = true;
@@ -345,7 +539,7 @@ var examples_main = function (_, Kotlin) {
     };
   }
   function HelloThreeKt$run$lambda(it) {
-    var renderer = new WebGLRenderer();
+    var renderer = new WebGLRenderer_init();
     renderer.setSize(HelloThreeKt$Companion_getInstance().WIDTH, HelloThreeKt$Companion_getInstance().HEIGHT);
     var scene = new Scene();
     var camera = new PerspectiveCamera(45, HelloThreeKt$Companion_getInstance().WIDTH / HelloThreeKt$Companion_getInstance().HEIGHT | 0, 0.1, 1000);
@@ -412,7 +606,7 @@ var examples_main = function (_, Kotlin) {
     };
   }
   function MoveEarth$run$lambda_0(it) {
-    var renderer = new WebGLRenderer();
+    var renderer = new WebGLRenderer_init();
     renderer.setSize(MoveEarth$Companion_getInstance().WIDTH, MoveEarth$Companion_getInstance().HEIGHT);
     var scene = new Scene();
     var camera = new PerspectiveCamera(45, MoveEarth$Companion_getInstance().WIDTH / MoveEarth$Companion_getInstance().HEIGHT | 0, 0.1, 10000);
@@ -475,7 +669,7 @@ var examples_main = function (_, Kotlin) {
     };
   }
   function PortalGun$run$lambda(it) {
-    var renderer = new WebGLRenderer();
+    var renderer = new WebGLRenderer_init();
     renderer.setSize(PortalGun$Companion_getInstance().WIDTH, PortalGun$Companion_getInstance().HEIGHT);
     renderer.setClearColor(10395294);
     var scene = new Scene();
@@ -524,19 +718,19 @@ var examples_main = function (_, Kotlin) {
     }
     return Shadow$Companion_instance;
   }
-  function Shadow$run$lambda$ObjectLiteral() {
+  function Shadow$run$ObjectLiteral() {
   }
-  Shadow$run$lambda$ObjectLiteral.$metadata$ = {
+  Shadow$run$ObjectLiteral.$metadata$ = {
     kind: Kind_CLASS,
     interfaces: []
   };
-  function Shadow$run$lambda$ObjectLiteral_0() {
+  function Shadow$run$ObjectLiteral_0() {
   }
-  Shadow$run$lambda$ObjectLiteral_0.$metadata$ = {
+  Shadow$run$ObjectLiteral_0.$metadata$ = {
     kind: Kind_CLASS,
     interfaces: []
   };
-  function Shadow$run$lambda$tick(closure$renderer, closure$scene, closure$camera, closure$light) {
+  function Shadow$run$tick(closure$renderer, closure$scene, closure$camera, closure$light) {
     var Math_0 = Math;
     return function closure$tick(d) {
       closure$renderer.render(closure$scene, closure$camera);
@@ -552,8 +746,8 @@ var examples_main = function (_, Kotlin) {
       }));
     };
   }
-  function Shadow$run$lambda(it) {
-    var renderer = new WebGLRenderer();
+  Shadow.prototype.run = function () {
+    var renderer = new WebGLRenderer_init();
     renderer.setSize(Shadow$Companion_getInstance().WIDTH, Shadow$Companion_getInstance().HEIGHT);
     renderer.setClearColor(10395294);
     renderer.shadowMap.enabled = true;
@@ -561,13 +755,13 @@ var examples_main = function (_, Kotlin) {
     var camera = new PerspectiveCamera(45, Shadow$Companion_getInstance().WIDTH / Shadow$Companion_getInstance().HEIGHT | 0, 0.1, 10000);
     camera.position.set(20, 20, 20);
     camera.lookAt(0, 0, 0);
-    var d = new Shadow$run$lambda$ObjectLiteral();
+    var d = new Shadow$run$ObjectLiteral();
     d['color'] = 8421504;
     d['roughness'] = 0.0;
     var floor = new Mesh(new BoxGeometry(2000, 0.1, 2000), new MeshStandardMaterial(d));
     floor.receiveShadow = true;
     scene.add(floor);
-    var d1 = new Shadow$run$lambda$ObjectLiteral_0();
+    var d1 = new Shadow$run$ObjectLiteral_0();
     d1['color'] = 11141120;
     d1['roughness'] = 0.0;
     var knot = new Mesh(new TorusKnotGeometry(3, 1, 100, 16), new MeshStandardMaterial(d));
@@ -580,12 +774,8 @@ var examples_main = function (_, Kotlin) {
     light.shadow.mapSize.height = 2048;
     scene.add(light);
     ensureNotNull(document.getElementById('WebGL-output')).appendChild(renderer.domElement);
-    var tick = Shadow$run$lambda$tick(renderer, scene, camera, light);
+    var tick = Shadow$run$tick(renderer, scene, camera, light);
     tick(2);
-    return Unit;
-  }
-  Shadow.prototype.run = function () {
-    window.onload = Shadow$run$lambda;
   };
   Shadow.$metadata$ = {
     kind: Kind_CLASS,
@@ -600,14 +790,21 @@ var examples_main = function (_, Kotlin) {
   });
   package$example.main_kand9s$ = main;
   package$example.Runnable = Runnable;
-  var package$tetris = package$example.tetris || (package$example.tetris = {});
-  package$tetris.Stage = Stage;
-  package$tetris.MoveAbleBlock = MoveAbleBlock;
   Object.defineProperty(Tetris, 'Companion', {
     get: Tetris$Companion_getInstance
   });
+  var package$tetris = package$example.tetris || (package$example.tetris = {});
   package$tetris.Tetris = Tetris;
   package$tetris.MoveAbleBox = MoveAbleBox;
+  package$tetris.TBlock = TBlock;
+  Object.defineProperty(TetrisBoard, 'Companion', {
+    get: TetrisBoard$Companion_getInstance
+  });
+  package$tetris.TetrisBoard = TetrisBoard;
+  Object.defineProperty(TetrisBlock, 'Companion', {
+    get: TetrisBlock$Companion_getInstance
+  });
+  package$tetris.TetrisBlock = TetrisBlock;
   Object.defineProperty(ForMe, 'Companion', {
     get: ForMe$Companion_getInstance
   });

@@ -31,8 +31,6 @@ class Shadow : Runnable {
     }
 
     override fun run() {
-
-        window.onload = {
             val renderer = WebGLRenderer()
             renderer.setSize(WIDTH, HEIGHT)
             renderer.setClearColor(0x9e9e9e)
@@ -91,6 +89,5 @@ class Shadow : Runnable {
             }
 
             tick(2)
-        }
     }
 }

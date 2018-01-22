@@ -7,6 +7,7 @@ import jp.ogiwara.three.math.Color
  * Refer: https://material.io/guidelines/style/color.html#color-color-palette
  */
 object ColorPalette {
+
     val RED = Color(0xf4,0x43,0x36)
     val PINK = Color(0xe9,0x1e,0x63)
 
